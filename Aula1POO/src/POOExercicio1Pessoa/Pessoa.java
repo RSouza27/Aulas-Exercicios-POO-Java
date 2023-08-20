@@ -1,4 +1,4 @@
-package aula1poo;
+package POOExercicio1Pessoa;
 
 public class Pessoa {
     private String   cpf;
