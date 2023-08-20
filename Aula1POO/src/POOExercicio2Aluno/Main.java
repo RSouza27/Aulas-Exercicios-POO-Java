@@ -39,7 +39,7 @@ public class Main {
                 case "2":
                     //Visualizar
                     if(aluno == null){
-                        JOptionPane.showMessageDialog(null, "Nenhuma Pessoa Cadastrada!");
+                        JOptionPane.showMessageDialog(null, "Nenhum Aluno Cadastrado!");
                         break;
                     }
                     
