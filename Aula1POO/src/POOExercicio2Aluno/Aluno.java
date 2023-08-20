@@ -2,7 +2,7 @@ package POOExercicio2Aluno;
 
 public class Aluno {
     private String nome;
-    private int ra;
+    private String ra;
     private double ac1;
     private double ac2;
     private double ag;
@@ -16,11 +16,11 @@ public class Aluno {
         this.nome = nome;
     }
 
-    public int getRa() {
+    public String getRa() {
         return ra;
     }
 
-    public void setRa(int ra) {
+    public void setRa(String ra) {
         this.ra = ra;
     }
 

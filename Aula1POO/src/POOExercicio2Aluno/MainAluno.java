@@ -6,8 +6,7 @@ import javax.swing.JOptionPane;
 public class MainAluno {
 
     public static void main(String[] args) {
-        String nome, opt = "";
-        int ra;
+        String nome, ra, opt = "";
         double ac1, ac2, ag, af;
         Aluno aluno = new Aluno();
         
@@ -22,11 +21,11 @@ public class MainAluno {
                 case "1":
                     //Cadastrar
                     nome = JOptionPane.showInputDialog("Digite seu Nome: ");
-                    ra  = Integer.parseInt(JOptionPane.showInputDialog("Digite seu RA: ")); 
-                    ac1 = Double.parseDouble(JOptionPane.showInputDialog("Nota AC1: "));
-                    ac2 = Double.parseDouble(JOptionPane.showInputDialog("Nota AC2: "));
-                    ag  = Double.parseDouble(JOptionPane.showInputDialog("Nota AG:" ));
-                    af  = Double.parseDouble(JOptionPane.showInputDialog("Nota AF: "));
+                    ra   = JOptionPane.showInputDialog("Digite seu RA: "); 
+                    ac1  = Double.parseDouble(JOptionPane.showInputDialog("Nota AC1: "));
+                    ac2  = Double.parseDouble(JOptionPane.showInputDialog("Nota AC2: "));
+                    ag   = Double.parseDouble(JOptionPane.showInputDialog("Nota AG:" ));
+                    af   = Double.parseDouble(JOptionPane.showInputDialog("Nota AF: "));
                          
                     aluno = new Aluno();
                     aluno.setNome(nome);
