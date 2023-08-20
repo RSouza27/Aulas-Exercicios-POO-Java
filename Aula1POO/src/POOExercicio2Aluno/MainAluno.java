@@ -3,7 +3,7 @@ package POOExercicio2Aluno;
 import POOExercicio2Aluno.Aluno;
 import javax.swing.JOptionPane;
 
-public class Main {
+public class MainAluno {
 
     public static void main(String[] args) {
         String nome, opt = "";

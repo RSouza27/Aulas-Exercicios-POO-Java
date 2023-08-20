@@ -2,7 +2,7 @@ package POOExercicio1Pessoa;
 
 import javax.swing.JOptionPane;
 
-public class Main {
+public class MainPessoa {
     
     public static void main(String[] args) {
         String nome, cpf, opt = "";

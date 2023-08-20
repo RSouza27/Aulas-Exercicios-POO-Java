@@ -8,7 +8,7 @@ package POOExercicio3Funcionario;
  *
  * @author Leandro
  */
-public class Main {
+public class MainFuncionario {
 
     /**
      * @param args the command line arguments
