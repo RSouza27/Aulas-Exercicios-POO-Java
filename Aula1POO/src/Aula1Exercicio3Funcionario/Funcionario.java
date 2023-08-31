@@ -1,4 +1,4 @@
-package POOExercicio3Funcionario;
+package Aula1Exercicio3Funcionario;
 
 public class Funcionario {
     private String nome;

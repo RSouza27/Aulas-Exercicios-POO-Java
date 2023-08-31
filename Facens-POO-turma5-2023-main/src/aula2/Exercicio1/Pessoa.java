@@ -1,10 +1,10 @@
-package POOExercicio1Pessoa;
+package Aula2.Exercicio1;
 
 public class Pessoa {
-    private String   cpf;
-    private String  nome;
-    private char    sexo;
-    private int    idade;
+    private String cpf;
+    private String nome;
+    private char sexo;
+    private int idade;
 
     public String getCpf() {
         return cpf;
@@ -38,14 +38,10 @@ public class Pessoa {
         this.idade = idade;
     }
     
-    //==================================================
-    
-    public String imprimirPessoa() {
-        String str = "Nome: "    + getNome() +
-                     "\nCpf: "   + getCpf()  +
-                     "\nSexo: "  + getSexo() +
-                     "\nIdade: " + getIdade();
-        
-        return str;
-    }   
+    public String imprimir() {
+        return "CPF: "+getCpf()+
+                "\nNome: "+getNome()+
+                "\nSexo: "+getSexo()+
+                "\nIdade: "+getIdade();
+    }
 }

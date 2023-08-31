@@ -1,4 +1,4 @@
-package POOExercicio1Pessoa;
+package Aula1Exercicio1Pessoa;
 
 import javax.swing.JOptionPane;
 

@@ -1,13 +1,23 @@
-package POOExercicio2Aluno;
+package Aula2Exercicio2Aluno;
 
 public class Aluno {
+
     private String nome;
     private String ra;
     private double ac1;
     private double ac2;
     private double ag;
     private double af;
-
+    
+    public Aluno(String nome, String ra, double ac1, double ac2, double ag, double af ) {
+        this.nome = nome;
+        this.ra = ra;
+        this.ac1 = ac1;
+        this.ac2 = ac2;
+        this.ag = ag;
+        this.af = af;
+    }
+    
     public String getNome() {
         return nome;
     }
@@ -74,15 +84,14 @@ public class Aluno {
     } 
     
     public String imprimirAluno() {
-        String str = "Nome: "  + getNome() +
-                     "\nRA: "  + getRa() +
-                     "\nAC1: " + getAc1() +
-                     "\nAC2: " + getAc2() +
-                     "\nAG: "  + getAg() +
-                     "\nAF: "  + getAf() +
-                     "\nMÉDIA: "  + calcularMedia() +
-                     "\nSITUAÇÃO: " + verificarAprovacao() ;
-        
-        return str;
+        return  "Nome: "  + getNome() +
+                "\nRA: "  + getRa() +
+                "\nAC1: " + getAc1() +
+                "\nAC2: " + getAc2() +
+                "\nAG: "  + getAg() +
+                "\nAF: "  + getAf() +
+                "\nMÉDIA: "  + calcularMedia() +
+                "\nSITUAÇÃO: " + verificarAprovacao();
     } 
 }
+

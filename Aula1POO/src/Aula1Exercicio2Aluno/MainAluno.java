@@ -1,6 +1,5 @@
-package POOExercicio2Aluno;
+package Aula1Exercicio2Aluno;
 
-import POOExercicio2Aluno.Aluno;
 import javax.swing.JOptionPane;
 
 public class MainAluno {
