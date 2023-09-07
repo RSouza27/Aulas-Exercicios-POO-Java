@@ -6,9 +6,8 @@ import javax.swing.JOptionPane;
 public class MainExercicio01 {
 
     public static void main(String[] args) {
-        String nome, cpf;
-        int idade,escolha;
-        char sexo;
+        String nome, cpf, sexo;
+        int idade,escolha;     
         Pessoa usuario = new Pessoa ();
         
         do {
@@ -24,7 +23,7 @@ public class MainExercicio01 {
                     nome = JOptionPane.showInputDialog("Digite o nome: ");
                     cpf = JOptionPane.showInputDialog("Digite o CPF: ");
                     idade = Integer.parseInt(JOptionPane.showInputDialog("Digite a idade: "));
-                    sexo = JOptionPane.showInputDialog("Digite o Sexo (Masculino, Feminino, Outros): ").charAt(0);
+                    sexo = JOptionPane.showInputDialog("Digite o Sexo (Masculino, Feminino, Outros: ");
                     
                     usuario.setNome(nome);
                     usuario.setCPF(cpf);
