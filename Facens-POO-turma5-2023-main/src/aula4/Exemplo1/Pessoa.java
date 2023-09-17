@@ -1,4 +1,6 @@
-package aula3.Exemplo1;
+package aula4.Exemplo1;
+
+import aula3.Exemplo1.*;
 
 public class Pessoa {
     private String nome;
