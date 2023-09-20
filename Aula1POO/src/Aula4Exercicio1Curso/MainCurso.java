@@ -1,6 +1,7 @@
 package Aula4Exercicio1Curso;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 import javax.swing.JOptionPane;
 
 public class MainCurso {
@@ -19,64 +20,75 @@ public class MainCurso {
         
         Aluno aluno = new Aluno();
         
+        Scanner scanner = new Scanner(System.in);
+        
         do {
-            opt = JOptionPane.showInputDialog
-            ("1 - Cadastrar Curso "
-            + "\n2 - Mostrar Cursos "
-            + "\n3 - Cadastrar Aluno "
-            + "\n4 - Mostrar Alunos"
-            + "\n5 - Sair");
-            if(opt == null){
-                System.exit(0);
-            }
+            System.out.println ("\nEscolha uma opcao: " );
+            System.out.println ("\n1 - Cadastrar Curso ");
+            System.out.println ("\n2 - Mostrar Cursos ");
+            System.out.println ("\n3 - Cadastrar Aluno ");
+            System.out.println ("\n4 - Mostrar Alunos ");
+            System.out.println ("\n5 - Sair");
+
+            opt = scanner.nextLine();
             
             switch(opt) {
                 case "1" :
-                    codigo = Integer.parseInt(JOptionPane.showInputDialog("Código do Curso"));
-                    nomeCurso = JOptionPane.showInputDialog("Nome do Curso: ");
-                    cargaHoraria = Integer.parseInt(JOptionPane.showInputDialog("Carga Horária do Curso: "));
-                    
-                    curso.setCodigo(codigo);
-                    curso.setNomeCurso(nomeCurso);
-                    curso.setCargaHoraria(cargaHoraria);
+                    System.out.println("\nCodigo do curso: ");
+                    codigo = Integer.parseInt(scanner.nextLine());
+                    System.out.println("\nNome do curso: ");
+                    nomeCurso = scanner.nextLine();
+                    System.out.println("\nCarga horária do curso: ");
+                    cargaHoraria = Integer.parseInt(scanner.nextLine());
                     
                     lstCurso.add (new Curso(codigo, nomeCurso, cargaHoraria));
                     break;
-                
+                    
                 case "2" :
                     if(lstCurso.isEmpty()) {
-                        JOptionPane.showMessageDialog(null, "Nenhum Curso Cadastrado!");
+                        System.out.println ("\nNenhum Curso Cadastrado!");
                         break;
                     }
-                    JOptionPane.showMessageDialog(null, curso.imprimir());
+                    for( Curso c : lstCurso) {
+                        System.out.println (c.imprimir());
+                    }    
                     break;
-                
+                    
                 case "3" :
-                    ra = JOptionPane.showInputDialog("RA do Aluno: ");
-                    nomeAluno = JOptionPane.showInputDialog("Nome do Aluno: ");
-                    nomeCurso = JOptionPane.showInputDialog("Nome do Curso: ");
+                    System.out.println("\nRA do aluno: ");
+                    ra = scanner.nextLine();
+                    System.out.println("\nNome do aluno: ");
+                    nomeAluno = scanner.nextLine();
+                    System.out.println("\nEscolha do curso: ");
+                    codigo = Integer.parseInt(scanner.nextLine());
                     
-                    aluno.setRa(ra);
-                    aluno.setNomeAluno(nomeAluno);
-                    curso.setNomeCurso(nomeCurso);
-                    
-                    lstAluno.add (new Aluno());
+                    lstAluno.add (new Aluno(ra, nomeAluno));
                     break;
                     
                 case "4" :    
-                     if(lstAluno.isEmpty()) {
-                        JOptionPane.showMessageDialog(null, "Nenhum Aluno Cadastrado!");
+                    if(lstAluno.isEmpty()) {
+                        System.out.println("\nNenhum Aluno Cadastrado!");
                         break;
                     }
-                    JOptionPane.showMessageDialog(null, curso.imprimirCompleto());
+                    System.out.println(curso.imprimirCompleto());
+                    break;
+                
+                case "5" :
+                    if(lstAluno.isEmpty()) {
+                        System.out.println("\nNenhum Aluno Cadastrado!");
+                        break;
+                    }
+                    System.out.println("Insira o ra para excluir: ");
+                    ra = scanner.nextLine();
+                    lstAluno.remove (new Aluno());
+                    
+                case "6" :
                     break;
                     
-                
                 default:
-                JOptionPane.showMessageDialog(null, "Opção Inválida!", "Erro", JOptionPane.WARNING_MESSAGE);
-            
+                System.out.println("\nOpcao Invalida!");
             }   
-        }while(!opt.equals("5"));
+        }while(!opt.equals("6"));
     }
     
 }
