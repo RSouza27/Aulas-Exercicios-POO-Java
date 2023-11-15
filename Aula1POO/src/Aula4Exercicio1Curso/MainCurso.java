@@ -38,7 +38,7 @@ public class MainCurso {
                     codigo = Integer.parseInt(scanner.nextLine());
                     System.out.println("\nNome do curso: ");
                     nomeCurso = scanner.nextLine();
-                    System.out.println("\nCarga horária do curso: ");
+                    System.out.println("\nCarga horaria do curso: ");
                     cargaHoraria = Integer.parseInt(scanner.nextLine());
                     
                     lstCurso.add (new Curso(codigo, nomeCurso, cargaHoraria));
